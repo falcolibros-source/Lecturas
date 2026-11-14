@@ -25,7 +25,7 @@ h2{font-size:15px;margin:18px 0 8px;color:var(--mute);font-weight:600;text-trans
 .bar{height:7px;border-radius:5px;background:var(--line);overflow:hidden;margin-top:6px}
 .bar>i{display:block;height:100%;background:var(--acc)}
 nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);z-index:5}
-nav button{flex:1;border:0;background:none;color:var(--mute);padding:12px 4px;font:inherit;font-size:13px}
+nav button{flex:1;border:0;background:none;color:var(--mute);padding:12px 2px;font:inherit;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 nav button.on{color:var(--acc);font-weight:700}
 button{font:inherit}
 .btn{border:0;background:var(--acc);color:#fff;border-radius:10px;padding:10px 14px;font-weight:600}
@@ -93,7 +93,7 @@ from_to:'Del {a} al {b}',finished_on:'Terminado el {b}',
 lib_read:'Leídos',lib_total:'Total',library:'Biblioteca',opt_all:'Total leídos',opt_year:'Leídos en {y}',opt_dropped:'Abandonados',no_dropped:'No hay libros abandonados.',
 book_one:'libro',book_many:'libros',until_today:' hasta hoy',in_year:' en {y}',n_pages:'{n} páginas',no_done:'Aún no hay libros terminados.',
 stats:'Estadísticas',reading_days:'Días de lectura',pages_year:'Páginas por año',pages_in_year:'Páginas leídas en el año:',top_authors:'Autores más leídos',
-backup:'Copia de seguridad',nav_reading:'📖 Leyendo',nav_library:'📚 Biblioteca',nav_stats:'📊 Datos',add_book_aria:'Añadir libro',
+backup:'Copia de seguridad',nav_reading:'📖 Leyendo',nav_pending:'📌 Pendientes',nav_library:'📚 Biblioteca',nav_stats:'📊 Datos',add_book_aria:'Añadir libro',
 close:'Cerrar',edition_year:'Año de edición',eg:'p. ej. 1999',status:'Estado',progress:'Progreso',start_page:'Página inicial',end_page:'Página final',
 log_session:'Registrar sesión',book_photos:'Fotos del libro',take_photo:'📷 Hacer foto',gallery:'🖼️ Galería',started:'Empezado:',finished:'Terminado:',
 rating:'Valoración',notes:'Notas / reseña',notes_ph:'Qué te ha parecido…',save_notes:'Guardar notas',saved:'Guardado ✓',
@@ -117,7 +117,7 @@ from_to:'From {a} to {b}',finished_on:'Finished on {b}',
 lib_read:'Read',lib_total:'All',library:'Library',opt_all:'All read',opt_year:'Read in {y}',opt_dropped:'Abandoned',no_dropped:'No abandoned books.',
 book_one:'book',book_many:'books',until_today:' up to today',in_year:' in {y}',n_pages:'{n} pages',no_done:'No finished books yet.',
 stats:'Statistics',reading_days:'Reading days',pages_year:'Pages per year',pages_in_year:'Pages read this year:',top_authors:'Most read authors',
-backup:'Backup',nav_reading:'📖 Reading',nav_library:'📚 Library',nav_stats:'📊 Stats',add_book_aria:'Add book',
+backup:'Backup',nav_reading:'📖 Reading',nav_pending:'📌 To read',nav_library:'📚 Library',nav_stats:'📊 Stats',add_book_aria:'Add book',
 close:'Close',edition_year:'Edition year',eg:'e.g. 1999',status:'Status',progress:'Progress',start_page:'Start page',end_page:'End page',
 log_session:'Log session',book_photos:'Book photos',take_photo:'📷 Take photo',gallery:'🖼️ Gallery',started:'Started:',finished:'Finished:',
 rating:'Rating',notes:'Notes / review',notes_ph:'What did you think…',save_notes:'Save notes',saved:'Saved ✓',
@@ -141,7 +141,7 @@ from_to:'Dal {a} al {b}',finished_on:'Finito il {b}',
 lib_read:'Letti',lib_total:'Tutti',library:'Biblioteca',opt_all:'Tutti i letti',opt_year:'Letti nel {y}',opt_dropped:'Abbandonati',no_dropped:'Nessun libro abbandonato.',
 book_one:'libro',book_many:'libri',until_today:' fino a oggi',in_year:' nel {y}',n_pages:'{n} pagine',no_done:'Ancora nessun libro finito.',
 stats:'Statistiche',reading_days:'Giorni di lettura',pages_year:'Pagine per anno',pages_in_year:'Pagine lette nell\'anno:',top_authors:'Autori più letti',
-backup:'Backup',nav_reading:'📖 In lettura',nav_library:'📚 Biblioteca',nav_stats:'📊 Dati',add_book_aria:'Aggiungi libro',
+backup:'Backup',nav_reading:'📖 In lettura',nav_pending:'📌 Da leggere',nav_library:'📚 Biblioteca',nav_stats:'📊 Dati',add_book_aria:'Aggiungi libro',
 close:'Chiudi',edition_year:'Anno di edizione',eg:'es. 1999',status:'Stato',progress:'Progresso',start_page:'Pagina iniziale',end_page:'Pagina finale',
 log_session:'Registra sessione',book_photos:'Foto del libro',take_photo:'📷 Scatta foto',gallery:'🖼️ Galleria',started:'Iniziato:',finished:'Finito:',
 rating:'Valutazione',notes:'Note / recensione',notes_ph:'Che ne pensi…',save_notes:'Salva note',saved:'Salvato ✓',
@@ -165,7 +165,7 @@ from_to:'Vom {a} bis {b}',finished_on:'Beendet am {b}',
 lib_read:'Gelesen',lib_total:'Alle',library:'Bibliothek',opt_all:'Alle gelesen',opt_year:'Gelesen {y}',opt_dropped:'Abgebrochen',no_dropped:'Keine abgebrochenen Bücher.',
 book_one:'Buch',book_many:'Bücher',until_today:' bis heute',in_year:' in {y}',n_pages:'{n} Seiten',no_done:'Noch keine gelesenen Bücher.',
 stats:'Statistik',reading_days:'Lesetage',pages_year:'Seiten pro Jahr',pages_in_year:'Gelesene Seiten dieses Jahr:',top_authors:'Meistgelesene Autoren',
-backup:'Sicherung',nav_reading:'📖 Lesen',nav_library:'📚 Bibliothek',nav_stats:'📊 Daten',add_book_aria:'Buch hinzufügen',
+backup:'Sicherung',nav_reading:'📖 Lesen',nav_pending:'📌 Leseliste',nav_library:'📚 Bibliothek',nav_stats:'📊 Daten',add_book_aria:'Buch hinzufügen',
 close:'Schließen',edition_year:'Ausgabejahr',eg:'z. B. 1999',status:'Status',progress:'Fortschritt',start_page:'Startseite',end_page:'Endseite',
 log_session:'Sitzung eintragen',book_photos:'Fotos des Buchs',take_photo:'📷 Foto aufnehmen',gallery:'🖼️ Galerie',started:'Begonnen:',finished:'Beendet:',
 rating:'Bewertung',notes:'Notizen / Rezension',notes_ph:'Wie hat es dir gefallen…',save_notes:'Notizen speichern',saved:'Gespeichert ✓',
@@ -189,7 +189,7 @@ from_to:'Du {a} au {b}',finished_on:'Terminé le {b}',
 lib_read:'Lus',lib_total:'Tous',library:'Bibliothèque',opt_all:'Tous les lus',opt_year:'Lus en {y}',opt_dropped:'Abandonnés',no_dropped:'Aucun livre abandonné.',
 book_one:'livre',book_many:'livres',until_today:' jusqu\'à aujourd\'hui',in_year:' en {y}',n_pages:'{n} pages',no_done:'Aucun livre terminé pour l\'instant.',
 stats:'Statistiques',reading_days:'Jours de lecture',pages_year:'Pages par an',pages_in_year:'Pages lues cette année :',top_authors:'Auteurs les plus lus',
-backup:'Sauvegarde',nav_reading:'📖 Lecture',nav_library:'📚 Bibliothèque',nav_stats:'📊 Données',add_book_aria:'Ajouter un livre',
+backup:'Sauvegarde',nav_reading:'📖 Lecture',nav_pending:'📌 À lire',nav_library:'📚 Bibliothèque',nav_stats:'📊 Données',add_book_aria:'Ajouter un livre',
 close:'Fermer',edition_year:'Année d\'édition',eg:'ex. 1999',status:'Statut',progress:'Progression',start_page:'Page de début',end_page:'Page de fin',
 log_session:'Enregistrer la séance',book_photos:'Photos du livre',take_photo:'📷 Prendre une photo',gallery:'🖼️ Galerie',started:'Commencé :',finished:'Terminé :',
 rating:'Note',notes:'Notes / avis',notes_ph:'Qu\'en as-tu pensé…',save_notes:'Enregistrer les notes',saved:'Enregistré ✓',
@@ -213,7 +213,7 @@ from_to:'{a}〜{b}',finished_on:'{b} に読了',
 lib_read:'読了',lib_total:'すべて',library:'本棚',opt_all:'すべての読了',opt_year:'{y}年に読了',opt_dropped:'中断した本',no_dropped:'中断した本はありません。',
 book_one:'冊',book_many:'冊',until_today:'（今日まで）',in_year:'（{y}年）',n_pages:'{n}ページ',no_done:'読了した本はまだありません。',
 stats:'統計',reading_days:'読書した日',pages_year:'年間ページ数',pages_in_year:'今年読んだページ数:',top_authors:'よく読む著者',
-backup:'バックアップ',nav_reading:'📖 読書中',nav_library:'📚 本棚',nav_stats:'📊 データ',add_book_aria:'本を追加',
+backup:'バックアップ',nav_reading:'📖 読書中',nav_pending:'📌 未読',nav_library:'📚 本棚',nav_stats:'📊 データ',add_book_aria:'本を追加',
 close:'閉じる',edition_year:'出版年',eg:'例: 1999',status:'状態',progress:'進捗',start_page:'開始ページ',end_page:'終了ページ',
 log_session:'読書を記録',book_photos:'本の写真',take_photo:'📷 写真を撮る',gallery:'🖼️ ギャラリー',started:'開始:',finished:'読了:',
 rating:'評価',notes:'メモ / 感想',notes_ph:'感想を書く…',save_notes:'メモを保存',saved:'保存しました ✓',
@@ -238,7 +238,7 @@ it:'<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height=
 FLAG.de='<svg viewBox="0 0 30 18" preserveAspectRatio="none"><rect width="30" height="6" fill="#000"/><rect y="6" width="30" height="6" fill="#dd0000"/><rect y="12" width="30" height="6" fill="#ffce00"/></svg>';
 FLAG.fr='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height="20" fill="#0055a4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ef4135"/></svg>';
 FLAG.ja='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg>';
-const APP_VERSION='v2026.11.15-k';
+const APP_VERSION='v2026.11.15-l';
 const KEY='lecturas.v1',LKEY='lecturas.lang';
 let lang='es';
 try{const l=localStorage.getItem(LKEY);if(l&&D[l])lang=l;else{const n=(navigator.language||'es').slice(0,2);if(D[n])lang=n}}catch(e){}
@@ -343,6 +343,10 @@ function vReading(){
   h+=`<h2>${esc(t('reading_now'))}</h2>`+(r.length?r.map(bookRow).join(''):`<div class="empty">${esc(t('nothing'))}</div>`);
   return h;
 }
+function vPending(){
+  const r=S.books.filter(b=>b.status==='pending');
+  return `<h1>${esc(stLabel('pending'))}</h1>`+(r.length?`<div class="m" style="margin-bottom:8px">${r.length} ${r.length===1?t('book_one'):t('book_many')}</div>`+r.map(bookRow).join(''):`<div class="empty">${esc(t('no_pending'))}</div>`);
+}
 let ordYear='all';
 const fdate=d=>d?(lang==='ja'?d.replace(/-/g,'/'):d.split('-').reverse().join('/')):'';
 function orderRow(b,n){
@@ -357,15 +361,14 @@ function libBody(){
     .sort((x,y)=>x.b.finished.localeCompare(y.b.finished)||x.i-y.i).map(x=>x.b);
   const last=Math.max(2026,new Date().getFullYear(),...done.map(b=>+b.finished.slice(0,4)));
   const years=[];for(let y=2026;y<=last;y++)years.push(String(y));
-  if(!['all','dropped','reading','pending'].includes(ordYear)&&!years.includes(ordYear))ordYear='all';
-  const dr=ordYear==='dropped',rd=ordYear==='reading',pd=ordYear==='pending',ch=(k,l,on)=>`<button class="chip ${on?'on':''}" data-act="ord" data-id="${k}">${esc(l)}</button>`;
+  if(!['all','dropped','reading'].includes(ordYear)&&!years.includes(ordYear))ordYear='all';
+  const dr=ordYear==='dropped',rd=ordYear==='reading',ch=(k,l,on)=>`<button class="chip ${on?'on':''}" data-act="ord" data-id="${k}">${esc(l)}</button>`;
   const q=libQ.trim().toLowerCase();
   if(q){
     const f=S.books.filter(b=>[b.title,b.author,b.notes,...(b.quotes||[]).map(x=>x.text)].join(' ').toLowerCase().includes(q));
     return f.length?f.map(bookRow).join(''):`<div class="empty">${esc(t('no_matches'))}</div>`;
   }
-  let h=`<div class="chips" style="margin-bottom:8px">${ch('pending',stLabel('pending'),pd)}${ch('reading',stLabel('reading'),rd)}${ch('all',t('lib_read'),!dr&&!rd&&!pd)}${ch('dropped',t('opt_dropped'),dr)}</div>`;
-  if(pd){const r=S.books.filter(b=>b.status==='pending');return h+(r.length?r.map(bookRow).join(''):`<div class="empty">${esc(t('no_pending'))}</div>`)}
+  let h=`<div class="chips" style="margin-bottom:8px">${ch('reading',stLabel('reading'),rd)}${ch('all',t('lib_read'),!dr&&!rd)}${ch('dropped',t('opt_dropped'),dr)}</div>`;
   if(rd){const r=S.books.filter(b=>b.status==='reading');return h+(r.length?r.map(bookRow).join(''):`<div class="empty">${esc(t('no_reading'))}</div>`)}
   if(!dr)h+=`<div class="chips" style="margin-bottom:12px">${ch('all',t('lib_total'),ordYear==='all')}${years.map(y=>ch(y,y,ordYear===y)).join('')}</div>`;
   if(ordYear==='dropped'){
@@ -696,9 +699,9 @@ function langbar(){
 
 function render(){
   let h=langbar();
-  h+=view==='reading'?vReading():view==='library'?vLibrary():vStats();
+  h+=view==='reading'?vReading():view==='pending'?vPending():view==='library'?vLibrary():vStats();
   h+=`<button class="fab" data-act="add" aria-label="${esc(t('add_book_aria'))}">+</button>
-  <nav>${[['reading','nav_reading'],['library','nav_library'],['stats','nav_stats']].map(([k,v])=>`<button class="${view===k?'on':''}" data-act="nav" data-id="${k}">${esc(t(v))}</button>`).join('')}</nav>`;
+  <nav>${[['reading','nav_reading'],['pending','nav_pending'],['library','nav_library'],['stats','nav_stats']].map(([k,v])=>`<button class="${view===k?'on':''}" data-act="nav" data-id="${k}">${esc(t(v))}</button>`).join('')}</nav>`;
   if(openId&&get(openId))h+=sheetBook(get(openId))+(viewId?viewer():'');
   else if(adding)h+=sheetAdd();
   else if(dataSheet)h+=sheetData();
