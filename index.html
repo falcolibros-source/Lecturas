@@ -238,7 +238,7 @@ it:'<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height=
 FLAG.de='<svg viewBox="0 0 30 18" preserveAspectRatio="none"><rect width="30" height="6" fill="#000"/><rect y="6" width="30" height="6" fill="#dd0000"/><rect y="12" width="30" height="6" fill="#ffce00"/></svg>';
 FLAG.fr='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height="20" fill="#0055a4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ef4135"/></svg>';
 FLAG.ja='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg>';
-const APP_VERSION='v2026.11.15-n';
+const APP_VERSION='v2026.11.15-o';
 const KEY='lecturas.v1',LKEY='lecturas.lang';
 let lang='es';
 try{const l=localStorage.getItem(LKEY);if(l&&D[l])lang=l;else{const n=(navigator.language||'es').slice(0,2);if(D[n])lang=n}}catch(e){}
@@ -727,20 +727,21 @@ function setStatus(b,s){
   if(s==='done'){b.finished=today();if(!b.started)b.started=today();if(b.pages)b.current=b.pages}
   if(s!=='done')b.finished=b.finished&&s==='dropped'?b.finished:'';
 }
-let titlesBusy=false;const titleFail=new Set();
+const titleBusy=new Set(),titleFail={};
+const withTO=(pr,ms)=>Promise.race([pr,new Promise((_,rj)=>setTimeout(()=>rj(new Error('timeout')),ms))]);
 async function translateTitles(){
-  if(titlesBusy)return;titlesBusy=true;
-  const L=lang;let n=0;
+  const L=lang;if(titleBusy.has(L))return;titleBusy.add(L);
   try{
-    for(const b of S.books){
-      if(lang!==L)break;
-      if(!b.tl||b.tl===L||(b.titles&&b.titles[L])||titleFail.has(b.id+L))continue;
-      let r=await viaChrome(b.title,b.tl,L);
-      if(!r){try{r=await mm(b.title,b.tl,L)}catch(e){r=null}}
-      if(r&&r.trim()){(b.titles=b.titles||{})[L]=r.trim();n++;save();if(!openId&&!viewId&&!adding&&!dataSheet)render()}
-      else titleFail.add(b.id+L);
+    for(const b of [...S.books]){
+      if(!b.tl||b.tl===L||(b.titles&&b.titles[L]))continue;
+      const k=b.id+L;if(titleFail[k]&&Date.now()-titleFail[k]<60000)continue;
+      let r=null;
+      try{r=await withTO(mm(b.title,b.tl,L),8000)}catch(e){r=null}
+      if(!r)try{r=await withTO(viaChrome(b.title,b.tl,L),8000)}catch(e){r=null}
+      if(r&&r.trim()){(b.titles=b.titles||{})[L]=r.trim();delete titleFail[k];save();if(lang===L&&!openId&&!viewId&&!adding&&!dataSheet)render()}
+      else titleFail[k]=Date.now();
     }
-  }finally{titlesBusy=false}
+  }finally{titleBusy.delete(L)}
 }
 function setLang(l){
   lang=l;ocrLang=OCRMAP[l];trLang=l;
