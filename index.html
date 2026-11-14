@@ -86,7 +86,7 @@ button:disabled{opacity:.35}
 <script>
 const D={
 es:{
-app_title:'Mis lecturas',ocr_clean:'Limpiar texto',sel_hint:'Arrastra el dedo sobre la foto para elegir la zona que quieres leer.',sel_clear:'Leer toda la foto',ocr_tip:'Consejo: encuadra solo la página, con buena luz, sin sombras y el texto recto. Comprueba que el idioma elegido es el del libro.',translate:'Traducir',translate_to:'Traducir a',translating:'Traduciendo…',tr_fail:'No se pudo traducir (hace falta conexión).',tr_limit:'Límite diario del traductor alcanzado; inténtalo mañana.',tr_text:'Traducción',tr_same:'El idioma de destino es el mismo que el del texto.',st_reading:'Leyendo',st_done:'Terminado',st_dropped:'Abandonado',unknown_author:'Autor desconocido',
+app_title:'Mis lecturas',sessions:'Sesiones de lectura',bk_download:'Descargar copia',bk_share:'Compartir copia',bk_file_import:'Importar desde archivo',bk_working:'Preparando…',bk_done:'Copia lista ✓',bk_confirm:'Confirmar: sustituir mis datos por la copia ({n} libros)',isbn_search:'Buscar por ISBN',scan_isbn:'📷 Escanear',isbn_notfound:'No se encontró ese ISBN.',scan_unsupported:'Este móvil no admite el escáner; escribe el ISBN a mano.',scan_denied:'No se pudo abrir la cámara.',scan_hint:'Apunta al código de barras del libro',cancel:'Cancelar',q_copy:'Copiar citas',q_share:'Compartir citas',q_all:'Compartir todas las citas',q_none:'Aún no hay citas.',no_reading:'No estás leyendo ningún libro.',ocr_clean:'Limpiar texto',sel_hint:'Arrastra el dedo sobre la foto para elegir la zona que quieres leer.',sel_clear:'Leer toda la foto',ocr_tip:'Consejo: encuadra solo la página, con buena luz, sin sombras y el texto recto. Comprueba que el idioma elegido es el del libro.',translate:'Traducir',translate_to:'Traducir a',translating:'Traduciendo…',tr_fail:'No se pudo traducir (hace falta conexión).',tr_limit:'Límite diario del traductor alcanzado; inténtalo mañana.',tr_text:'Traducción',tr_same:'El idioma de destino es el mismo que el del texto.',st_reading:'Leyendo',st_done:'Terminado',st_dropped:'Abandonado',unknown_author:'Autor desconocido',
 nosave:'No se puede guardar en este navegador. Usa «Copia de seguridad» para no perder datos.',
 books_done:'Libros terminados',streak:'Racha',reading_now:'Leyendo ahora',nothing:'Nada en marcha. Pulsa + para añadir un libro.',
 from_to:'Del {a} al {b}',finished_on:'Terminado el {b}',
@@ -100,7 +100,7 @@ rating:'Valoración',notes:'Notas / reseña',notes_ph:'Qué te ha parecido…',s
 quotes:'Citas favoritas',new_quote:'Nueva cita',pg_short:'Pág.',add_quote:'Añadir cita',del_book:'Borrar libro',del_confirm:'Pulsa otra vez para borrar',
 new_book:'Nuevo libro',title:'Título',lookup:'Buscar datos en Open Library',searching:'Buscando…',no_results:'Sin resultados.',
 lookup_fail:'Búsqueda no disponible aquí; rellena los datos a mano.',author:'Autor',pages:'Páginas',add:'Añadir',
-backup_note:'Las fotos se guardan solo en este dispositivo y no van en la copia de seguridad.',
+backup_note:'La copia en archivo incluye libros, notas y fotos. El texto de más abajo incluye solo libros y notas.',
 export_lbl:'Exportar: copia este texto y guárdalo en tus notas o en un mensaje a ti mismo',copy:'Copiar',copied:'Copiado ✓',copy_manual:'Copia manualmente el texto seleccionado',
 import_lbl:'Importar: pega aquí una copia anterior (sustituye lo actual)',paste_json:'Pega el JSON',import:'Importar',import_confirm:'Confirmar: sustituir datos',bad_json:'JSON no válido',
 photo_nosupport:'Las fotos no se pueden guardar en este navegador.',photo_fail:'No se pudo guardar la foto en este navegador.',
@@ -110,7 +110,7 @@ ocr_save:'Guardar texto',ocr_quote:'Guardar como cita',ocr_loading:'Descargando 
 ocr_fail:'No se pudo leer el texto (la primera vez hace falta conexión).',ocr_empty:'No se ha encontrado texto.',ocr_lang:'Idioma del texto'
 },
 en:{
-app_title:'My reading',ocr_clean:'Clean up text',sel_hint:'Drag your finger over the photo to choose the area you want to read.',sel_clear:'Read the whole photo',ocr_tip:'Tip: frame only the page, with good light, no shadows and straight text. Check that the selected language is the book\'s.',translate:'Translate',translate_to:'Translate to',translating:'Translating…',tr_fail:'Couldn\'t translate (a connection is needed).',tr_limit:'Daily translator limit reached; try again tomorrow.',tr_text:'Translation',tr_same:'The target language is the same as the text language.',st_reading:'Reading',st_done:'Finished',st_dropped:'Abandoned',unknown_author:'Unknown author',
+app_title:'My reading',sessions:'Reading sessions',bk_download:'Download backup',bk_share:'Share backup',bk_file_import:'Import from file',bk_working:'Preparing…',bk_done:'Backup ready ✓',bk_confirm:'Confirm: replace my data with the backup ({n} books)',isbn_search:'Search by ISBN',scan_isbn:'📷 Scan',isbn_notfound:'ISBN not found.',scan_unsupported:'This phone doesn\'t support the scanner; type the ISBN by hand.',scan_denied:'Couldn\'t open the camera.',scan_hint:'Point at the book\'s barcode',cancel:'Cancel',q_copy:'Copy quotes',q_share:'Share quotes',q_all:'Share all quotes',q_none:'No quotes yet.',no_reading:'You\'re not reading any book.',ocr_clean:'Clean up text',sel_hint:'Drag your finger over the photo to choose the area you want to read.',sel_clear:'Read the whole photo',ocr_tip:'Tip: frame only the page, with good light, no shadows and straight text. Check that the selected language is the book\'s.',translate:'Translate',translate_to:'Translate to',translating:'Translating…',tr_fail:'Couldn\'t translate (a connection is needed).',tr_limit:'Daily translator limit reached; try again tomorrow.',tr_text:'Translation',tr_same:'The target language is the same as the text language.',st_reading:'Reading',st_done:'Finished',st_dropped:'Abandoned',unknown_author:'Unknown author',
 nosave:'Can\'t save in this browser. Use "Backup" so you don\'t lose your data.',
 books_done:'Books finished',streak:'Streak',reading_now:'Reading now',nothing:'Nothing in progress. Tap + to add a book.',
 from_to:'From {a} to {b}',finished_on:'Finished on {b}',
@@ -124,7 +124,7 @@ rating:'Rating',notes:'Notes / review',notes_ph:'What did you think…',save_not
 quotes:'Favourite quotes',new_quote:'New quote',pg_short:'Pg.',add_quote:'Add quote',del_book:'Delete book',del_confirm:'Tap again to delete',
 new_book:'New book',title:'Title',lookup:'Look up on Open Library',searching:'Searching…',no_results:'No results.',
 lookup_fail:'Search not available here; fill in the details by hand.',author:'Author',pages:'Pages',add:'Add',
-backup_note:'Photos are stored only on this device and are not included in the backup.',
+backup_note:'The file backup includes books, notes and photos. The text below includes only books and notes.',
 export_lbl:'Export: copy this text and keep it in your notes or in a message to yourself',copy:'Copy',copied:'Copied ✓',copy_manual:'Copy the selected text manually',
 import_lbl:'Import: paste a previous backup here (replaces current data)',paste_json:'Paste the JSON',import:'Import',import_confirm:'Confirm: replace data',bad_json:'Invalid JSON',
 photo_nosupport:'Photos can\'t be saved in this browser.',photo_fail:'Couldn\'t save the photo in this browser.',
@@ -134,7 +134,7 @@ ocr_save:'Save text',ocr_quote:'Save as quote',ocr_loading:'Downloading model…
 ocr_fail:'Couldn\'t read the text (a connection is needed the first time).',ocr_empty:'No text found.',ocr_lang:'Text language'
 },
 it:{
-app_title:'Le mie letture',ocr_clean:'Pulisci testo',sel_hint:'Trascina il dito sulla foto per scegliere la zona da leggere.',sel_clear:'Leggi tutta la foto',ocr_tip:'Consiglio: inquadra solo la pagina, con buona luce, senza ombre e testo dritto. Controlla che la lingua scelta sia quella del libro.',translate:'Traduci',translate_to:'Traduci in',translating:'Traduzione…',tr_fail:'Impossibile tradurre (serve la connessione).',tr_limit:'Limite giornaliero del traduttore raggiunto; riprova domani.',tr_text:'Traduzione',tr_same:'La lingua di destinazione è la stessa del testo.',st_reading:'In lettura',st_done:'Finito',st_dropped:'Abbandonato',unknown_author:'Autore sconosciuto',
+app_title:'Le mie letture',sessions:'Sessioni di lettura',bk_download:'Scarica backup',bk_share:'Condividi backup',bk_file_import:'Importa da file',bk_working:'Preparazione…',bk_done:'Backup pronto ✓',bk_confirm:'Conferma: sostituisci i miei dati con il backup ({n} libri)',isbn_search:'Cerca per ISBN',scan_isbn:'📷 Scansiona',isbn_notfound:'ISBN non trovato.',scan_unsupported:'Questo telefono non supporta lo scanner; scrivi l\'ISBN a mano.',scan_denied:'Impossibile aprire la fotocamera.',scan_hint:'Inquadra il codice a barre del libro',cancel:'Annulla',q_copy:'Copia citazioni',q_share:'Condividi citazioni',q_all:'Condividi tutte le citazioni',q_none:'Ancora nessuna citazione.',no_reading:'Non stai leggendo nessun libro.',ocr_clean:'Pulisci testo',sel_hint:'Trascina il dito sulla foto per scegliere la zona da leggere.',sel_clear:'Leggi tutta la foto',ocr_tip:'Consiglio: inquadra solo la pagina, con buona luce, senza ombre e testo dritto. Controlla che la lingua scelta sia quella del libro.',translate:'Traduci',translate_to:'Traduci in',translating:'Traduzione…',tr_fail:'Impossibile tradurre (serve la connessione).',tr_limit:'Limite giornaliero del traduttore raggiunto; riprova domani.',tr_text:'Traduzione',tr_same:'La lingua di destinazione è la stessa del testo.',st_reading:'In lettura',st_done:'Finito',st_dropped:'Abbandonato',unknown_author:'Autore sconosciuto',
 nosave:'Impossibile salvare in questo browser. Usa «Backup» per non perdere i dati.',
 books_done:'Libri finiti',streak:'Serie',reading_now:'In lettura ora',nothing:'Niente in corso. Tocca + per aggiungere un libro.',
 from_to:'Dal {a} al {b}',finished_on:'Finito il {b}',
@@ -148,7 +148,7 @@ rating:'Valutazione',notes:'Note / recensione',notes_ph:'Che ne pensi…',save_n
 quotes:'Citazioni preferite',new_quote:'Nuova citazione',pg_short:'Pag.',add_quote:'Aggiungi citazione',del_book:'Elimina libro',del_confirm:'Tocca di nuovo per eliminare',
 new_book:'Nuovo libro',title:'Titolo',lookup:'Cerca dati su Open Library',searching:'Ricerca…',no_results:'Nessun risultato.',
 lookup_fail:'Ricerca non disponibile qui; compila i dati a mano.',author:'Autore',pages:'Pagine',add:'Aggiungi',
-backup_note:'Le foto restano solo su questo dispositivo e non sono incluse nel backup.',
+backup_note:'Il backup su file include libri, note e foto. Il testo qui sotto include solo libri e note.',
 export_lbl:'Esporta: copia questo testo e conservalo nelle note o in un messaggio a te stesso',copy:'Copia',copied:'Copiato ✓',copy_manual:'Copia manualmente il testo selezionato',
 import_lbl:'Importa: incolla qui un backup precedente (sostituisce i dati attuali)',paste_json:'Incolla il JSON',import:'Importa',import_confirm:'Conferma: sostituisci i dati',bad_json:'JSON non valido',
 photo_nosupport:'Le foto non si possono salvare in questo browser.',photo_fail:'Impossibile salvare la foto in questo browser.',
@@ -158,7 +158,7 @@ ocr_save:'Salva testo',ocr_quote:'Salva come citazione',ocr_loading:'Scaricament
 ocr_fail:'Impossibile leggere il testo (la prima volta serve la connessione).',ocr_empty:'Nessun testo trovato.',ocr_lang:'Lingua del testo'
 },
 de:{
-app_title:'Meine Lektüre',ocr_clean:'Text bereinigen',sel_hint:'Ziehe mit dem Finger über das Foto, um den Bereich zum Lesen auszuwählen.',sel_clear:'Ganzes Foto lesen',ocr_tip:'Tipp: Nur die Seite aufnehmen, mit gutem Licht, ohne Schatten und gerade. Prüfe, dass die gewählte Sprache die des Buchs ist.',translate:'Übersetzen',translate_to:'Übersetzen nach',translating:'Übersetze…',tr_fail:'Übersetzung nicht möglich (Verbindung nötig).',tr_limit:'Tageslimit des Übersetzers erreicht; versuche es morgen erneut.',tr_text:'Übersetzung',tr_same:'Die Zielsprache ist dieselbe wie die Textsprache.',st_reading:'Lese gerade',st_done:'Gelesen',st_dropped:'Abgebrochen',unknown_author:'Unbekannter Autor',
+app_title:'Meine Lektüre',sessions:'Lesesitzungen',bk_download:'Sicherung herunterladen',bk_share:'Sicherung teilen',bk_file_import:'Aus Datei importieren',bk_working:'Wird vorbereitet…',bk_done:'Sicherung bereit ✓',bk_confirm:'Bestätigen: meine Daten durch die Sicherung ersetzen ({n} Bücher)',isbn_search:'Nach ISBN suchen',scan_isbn:'📷 Scannen',isbn_notfound:'ISBN nicht gefunden.',scan_unsupported:'Dieses Handy unterstützt den Scanner nicht; gib die ISBN von Hand ein.',scan_denied:'Kamera konnte nicht geöffnet werden.',scan_hint:'Richte die Kamera auf den Barcode des Buchs',cancel:'Abbrechen',q_copy:'Zitate kopieren',q_share:'Zitate teilen',q_all:'Alle Zitate teilen',q_none:'Noch keine Zitate.',no_reading:'Du liest gerade kein Buch.',ocr_clean:'Text bereinigen',sel_hint:'Ziehe mit dem Finger über das Foto, um den Bereich zum Lesen auszuwählen.',sel_clear:'Ganzes Foto lesen',ocr_tip:'Tipp: Nur die Seite aufnehmen, mit gutem Licht, ohne Schatten und gerade. Prüfe, dass die gewählte Sprache die des Buchs ist.',translate:'Übersetzen',translate_to:'Übersetzen nach',translating:'Übersetze…',tr_fail:'Übersetzung nicht möglich (Verbindung nötig).',tr_limit:'Tageslimit des Übersetzers erreicht; versuche es morgen erneut.',tr_text:'Übersetzung',tr_same:'Die Zielsprache ist dieselbe wie die Textsprache.',st_reading:'Lese gerade',st_done:'Gelesen',st_dropped:'Abgebrochen',unknown_author:'Unbekannter Autor',
 nosave:'In diesem Browser kann nicht gespeichert werden. Nutze „Sicherung“, um keine Daten zu verlieren.',
 books_done:'Gelesene Bücher',streak:'Serie',reading_now:'Aktuell am Lesen',nothing:'Nichts in Arbeit. Tippe auf +, um ein Buch hinzuzufügen.',
 from_to:'Vom {a} bis {b}',finished_on:'Beendet am {b}',
@@ -172,7 +172,7 @@ rating:'Bewertung',notes:'Notizen / Rezension',notes_ph:'Wie hat es dir gefallen
 quotes:'Lieblingszitate',new_quote:'Neues Zitat',pg_short:'S.',add_quote:'Zitat hinzufügen',del_book:'Buch löschen',del_confirm:'Nochmal tippen zum Löschen',
 new_book:'Neues Buch',title:'Titel',lookup:'Bei Open Library suchen',searching:'Suche…',no_results:'Keine Ergebnisse.',
 lookup_fail:'Suche hier nicht verfügbar; trage die Daten von Hand ein.',author:'Autor',pages:'Seiten',add:'Hinzufügen',
-backup_note:'Fotos werden nur auf diesem Gerät gespeichert und sind nicht in der Sicherung enthalten.',
+backup_note:'Die Datei-Sicherung enthält Bücher, Notizen und Fotos. Der Text unten enthält nur Bücher und Notizen.',
 export_lbl:'Export: Kopiere diesen Text und bewahre ihn in deinen Notizen oder in einer Nachricht an dich selbst auf',copy:'Kopieren',copied:'Kopiert ✓',copy_manual:'Kopiere den markierten Text manuell',
 import_lbl:'Import: Füge hier eine frühere Sicherung ein (ersetzt die aktuellen Daten)',paste_json:'JSON einfügen',import:'Importieren',import_confirm:'Bestätigen: Daten ersetzen',bad_json:'Ungültiges JSON',
 photo_nosupport:'Fotos können in diesem Browser nicht gespeichert werden.',photo_fail:'Das Foto konnte in diesem Browser nicht gespeichert werden.',
@@ -182,7 +182,7 @@ ocr_save:'Text speichern',ocr_quote:'Als Zitat speichern',ocr_loading:'Modell wi
 ocr_fail:'Text konnte nicht gelesen werden (beim ersten Mal ist eine Verbindung nötig).',ocr_empty:'Kein Text gefunden.',ocr_lang:'Sprache des Textes'
 },
 fr:{
-app_title:'Mes lectures',ocr_clean:'Nettoyer le texte',sel_hint:'Fais glisser le doigt sur la photo pour choisir la zone à lire.',sel_clear:'Lire toute la photo',ocr_tip:'Astuce : cadre uniquement la page, avec une bonne lumière, sans ombres et le texte droit. Vérifie que la langue choisie est celle du livre.',translate:'Traduire',translate_to:'Traduire en',translating:'Traduction…',tr_fail:'Impossible de traduire (connexion nécessaire).',tr_limit:'Limite quotidienne du traducteur atteinte ; réessaie demain.',tr_text:'Traduction',tr_same:'La langue cible est la même que celle du texte.',st_reading:'En cours',st_done:'Terminé',st_dropped:'Abandonné',unknown_author:'Auteur inconnu',
+app_title:'Mes lectures',sessions:'Séances de lecture',bk_download:'Télécharger la sauvegarde',bk_share:'Partager la sauvegarde',bk_file_import:'Importer depuis un fichier',bk_working:'Préparation…',bk_done:'Sauvegarde prête ✓',bk_confirm:'Confirmer : remplacer mes données par la sauvegarde ({n} livres)',isbn_search:'Chercher par ISBN',scan_isbn:'📷 Scanner',isbn_notfound:'ISBN introuvable.',scan_unsupported:'Ce téléphone ne prend pas en charge le scanner ; saisis l\'ISBN à la main.',scan_denied:'Impossible d\'ouvrir la caméra.',scan_hint:'Vise le code-barres du livre',cancel:'Annuler',q_copy:'Copier les citations',q_share:'Partager les citations',q_all:'Partager toutes les citations',q_none:'Aucune citation pour l\'instant.',no_reading:'Tu ne lis aucun livre.',ocr_clean:'Nettoyer le texte',sel_hint:'Fais glisser le doigt sur la photo pour choisir la zone à lire.',sel_clear:'Lire toute la photo',ocr_tip:'Astuce : cadre uniquement la page, avec une bonne lumière, sans ombres et le texte droit. Vérifie que la langue choisie est celle du livre.',translate:'Traduire',translate_to:'Traduire en',translating:'Traduction…',tr_fail:'Impossible de traduire (connexion nécessaire).',tr_limit:'Limite quotidienne du traducteur atteinte ; réessaie demain.',tr_text:'Traduction',tr_same:'La langue cible est la même que celle du texte.',st_reading:'En cours',st_done:'Terminé',st_dropped:'Abandonné',unknown_author:'Auteur inconnu',
 nosave:'Impossible d\'enregistrer dans ce navigateur. Utilise « Sauvegarde » pour ne pas perdre tes données.',
 books_done:'Livres terminés',streak:'Série',reading_now:'En cours de lecture',nothing:'Rien en cours. Touche + pour ajouter un livre.',
 from_to:'Du {a} au {b}',finished_on:'Terminé le {b}',
@@ -196,7 +196,7 @@ rating:'Note',notes:'Notes / avis',notes_ph:'Qu\'en as-tu pensé…',save_notes:
 quotes:'Citations favorites',new_quote:'Nouvelle citation',pg_short:'P.',add_quote:'Ajouter la citation',del_book:'Supprimer le livre',del_confirm:'Touche encore pour supprimer',
 new_book:'Nouveau livre',title:'Titre',lookup:'Chercher sur Open Library',searching:'Recherche…',no_results:'Aucun résultat.',
 lookup_fail:'Recherche indisponible ici ; remplis les données à la main.',author:'Auteur',pages:'Pages',add:'Ajouter',
-backup_note:'Les photos sont stockées uniquement sur cet appareil et ne sont pas incluses dans la sauvegarde.',
+backup_note:'La sauvegarde en fichier inclut livres, notes et photos. Le texte ci-dessous n\'inclut que les livres et les notes.',
 export_lbl:'Exporter : copie ce texte et garde-le dans tes notes ou dans un message à toi-même',copy:'Copier',copied:'Copié ✓',copy_manual:'Copie manuellement le texte sélectionné',
 import_lbl:'Importer : colle ici une sauvegarde précédente (remplace les données actuelles)',paste_json:'Colle le JSON',import:'Importer',import_confirm:'Confirmer : remplacer les données',bad_json:'JSON invalide',
 photo_nosupport:'Les photos ne peuvent pas être enregistrées dans ce navigateur.',photo_fail:'Impossible d\'enregistrer la photo dans ce navigateur.',
@@ -206,7 +206,7 @@ ocr_save:'Enregistrer le texte',ocr_quote:'Enregistrer comme citation',ocr_loadi
 ocr_fail:'Impossible de lire le texte (une connexion est nécessaire la première fois).',ocr_empty:'Aucun texte trouvé.',ocr_lang:'Langue du texte'
 },
 ja:{
-app_title:'マイ読書',ocr_clean:'テキストを整える',sel_hint:'写真上で指をドラッグして、読み取る範囲を選択してください。',sel_clear:'写真全体を読み取る',ocr_tip:'ヒント: ページだけを、明るい場所で、影や傾きがないように撮影してください。選択した言語が本の言語か確認してください。',translate:'翻訳',translate_to:'翻訳先',translating:'翻訳中…',tr_fail:'翻訳できませんでした（接続が必要です）。',tr_limit:'翻訳の1日の上限に達しました。明日もう一度お試しください。',tr_text:'翻訳',tr_same:'翻訳先の言語がテキストの言語と同じです。',st_reading:'読書中',st_done:'読了',st_dropped:'中断',unknown_author:'著者不明',
+app_title:'マイ読書',sessions:'読書記録',bk_download:'バックアップをダウンロード',bk_share:'バックアップを共有',bk_file_import:'ファイルから読み込む',bk_working:'準備中…',bk_done:'バックアップ完了 ✓',bk_confirm:'確認: データをバックアップ（{n}冊）で置き換える',isbn_search:'ISBNで検索',scan_isbn:'📷 スキャン',isbn_notfound:'このISBNは見つかりませんでした。',scan_unsupported:'この端末ではスキャナーを使えません。ISBNを手入力してください。',scan_denied:'カメラを開けませんでした。',scan_hint:'本のバーコードに向けてください',cancel:'キャンセル',q_copy:'引用をコピー',q_share:'引用を共有',q_all:'すべての引用を共有',q_none:'引用はまだありません。',no_reading:'読書中の本はありません。',ocr_clean:'テキストを整える',sel_hint:'写真上で指をドラッグして、読み取る範囲を選択してください。',sel_clear:'写真全体を読み取る',ocr_tip:'ヒント: ページだけを、明るい場所で、影や傾きがないように撮影してください。選択した言語が本の言語か確認してください。',translate:'翻訳',translate_to:'翻訳先',translating:'翻訳中…',tr_fail:'翻訳できませんでした（接続が必要です）。',tr_limit:'翻訳の1日の上限に達しました。明日もう一度お試しください。',tr_text:'翻訳',tr_same:'翻訳先の言語がテキストの言語と同じです。',st_reading:'読書中',st_done:'読了',st_dropped:'中断',unknown_author:'著者不明',
 nosave:'このブラウザでは保存できません。データを失わないよう「バックアップ」を使ってください。',
 books_done:'読了した本',streak:'連続日数',reading_now:'読書中',nothing:'進行中の本はありません。+をタップして本を追加。',
 from_to:'{a}〜{b}',finished_on:'{b} に読了',
@@ -220,7 +220,7 @@ rating:'評価',notes:'メモ / 感想',notes_ph:'感想を書く…',save_notes
 quotes:'お気に入りの引用',new_quote:'新しい引用',pg_short:'p.',add_quote:'引用を追加',del_book:'本を削除',del_confirm:'もう一度タップで削除',
 new_book:'新しい本',title:'タイトル',lookup:'Open Libraryで検索',searching:'検索中…',no_results:'見つかりませんでした。',
 lookup_fail:'ここでは検索できません。手入力してください。',author:'著者',pages:'ページ数',add:'追加',
-backup_note:'写真はこの端末にのみ保存され、バックアップには含まれません。',
+backup_note:'ファイルのバックアップには本・メモ・写真が含まれます。下のテキストには本とメモのみ含まれます。',
 export_lbl:'書き出し: このテキストをコピーして、メモや自分宛のメッセージに保存してください',copy:'コピー',copied:'コピーしました ✓',copy_manual:'選択したテキストを手動でコピーしてください',
 import_lbl:'読み込み: 以前のバックアップを貼り付けてください（現在のデータは置き換えられます）',paste_json:'JSONを貼り付け',import:'読み込む',import_confirm:'確認: データを置き換える',bad_json:'JSONが正しくありません',
 photo_nosupport:'このブラウザでは写真を保存できません。',photo_fail:'このブラウザに写真を保存できませんでした。',
@@ -238,7 +238,7 @@ it:'<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height=
 FLAG.de='<svg viewBox="0 0 30 18" preserveAspectRatio="none"><rect width="30" height="6" fill="#000"/><rect y="6" width="30" height="6" fill="#dd0000"/><rect y="12" width="30" height="6" fill="#ffce00"/></svg>';
 FLAG.fr='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height="20" fill="#0055a4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ef4135"/></svg>';
 FLAG.ja='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg>';
-const APP_VERSION='v2026.11.14-g';
+const APP_VERSION='v2026.11.14-h';
 const KEY='lecturas.v1',LKEY='lecturas.lang';
 let lang='es';
 try{const l=localStorage.getItem(LKEY);if(l&&D[l])lang=l;else{const n=(navigator.language||'es').slice(0,2);if(D[n])lang=n}}catch(e){}
@@ -258,6 +258,7 @@ const stLabel=k=>t('st_'+k);
 const STK=['reading','done','dropped'];
 function migrate(){S.books.forEach(b=>{if(b.status==='want'){b.status='reading';if(!b.started)b.started=today()}})}
 let view='reading',openId=null,adding=false,dataSheet=false,msg='',delArm=false,impArm=false,lookup=null;
+let scanning=false,scanStream=null,pendingBackup=null;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pad=n=>String(n).padStart(2,'0');
@@ -267,7 +268,7 @@ const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
 const hue=x=>{let h=0;for(const c of x)h=(h*31+c.charCodeAt(0))%360;return h};
 const pct=b=>b.pages>0?Math.min(100,Math.round(b.current/b.pages*100)):(b.status==='done'?100:0);
 const get=id=>S.books.find(b=>b.id===id);
-const cover=b=>`<div class="cover" style="background:hsl(${hue(b.title)} 38% 38%)">${esc((b.title||'?').trim().charAt(0).toUpperCase())}</div>`;
+const cover=b=>`<div class="cover" style="background:hsl(${hue(b.title)} 38% 38%);position:relative;overflow:hidden">${esc((b.title||'?').trim().charAt(0).toUpperCase())}${b.cover?`<img src="${esc(b.cover)}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.remove()">`:''}</div>`;
 const authorOf=b=>esc(b.author||t('unknown_author'));
 
 function bookRow(b){
@@ -308,9 +309,10 @@ function vLibrary(){
     .sort((x,y)=>x.b.finished.localeCompare(y.b.finished)||x.i-y.i).map(x=>x.b);
   const last=Math.max(2026,new Date().getFullYear(),...done.map(b=>+b.finished.slice(0,4)));
   const years=[];for(let y=2026;y<=last;y++)years.push(String(y));
-  if(ordYear!=='all'&&ordYear!=='dropped'&&!years.includes(ordYear))ordYear='all';
-  const dr=ordYear==='dropped',ch=(k,l,on)=>`<button class="chip ${on?'on':''}" data-act="ord" data-id="${k}">${esc(l)}</button>`;
-  let h=`<h1>${esc(t('library'))}</h1><div class="chips" style="margin-bottom:8px">${ch('all',t('lib_read'),!dr)}${ch('dropped',t('opt_dropped'),dr)}</div>`;
+  if(!['all','dropped','reading'].includes(ordYear)&&!years.includes(ordYear))ordYear='all';
+  const dr=ordYear==='dropped',rd=ordYear==='reading',ch=(k,l,on)=>`<button class="chip ${on?'on':''}" data-act="ord" data-id="${k}">${esc(l)}</button>`;
+  let h=`<h1>${esc(t('library'))}</h1><div class="chips" style="margin-bottom:8px">${ch('reading',stLabel('reading'),rd)}${ch('all',t('lib_read'),!dr&&!rd)}${ch('dropped',t('opt_dropped'),dr)}</div>`;
+  if(rd){const r=S.books.filter(b=>b.status==='reading');return h+(r.length?r.map(bookRow).join(''):`<div class="empty">${esc(t('no_reading'))}</div>`)}
   if(!dr)h+=`<div class="chips" style="margin-bottom:12px">${ch('all',t('lib_total'),ordYear==='all')}${years.map(y=>ch(y,y,ordYear===y)).join('')}</div>`;
   if(ordYear==='dropped'){
     const d=S.books.filter(b=>b.status==='dropped');
@@ -356,7 +358,7 @@ function vStats(){
   const dy=done.filter(b=>(b.finished||'').startsWith(statY+'-')).length;
   h+=`<div class="card"><div class="row"><div class="grow"><div class="m">${esc(t('opt_year',{y:statY}))}</div><div class="big">${dy}</div></div><div class="grow" style="text-align:right"><div class="m">${esc(t('books_done'))}</div><div class="big">${done.length}</div></div></div></div>`;
   if(top.length)h+=`<div class="card"><div class="m">${esc(t('top_authors'))}</div>${top.map(([a,n])=>`<div class="row"><div class="grow">${esc(a)}</div><b>${n}</b></div>`).join('')}</div>`;
-  h+=`<button class="btn sec" style="width:100%" data-act="data">${esc(t('backup'))}</button><div class="m" style="text-align:center;margin-top:14px">${APP_VERSION}</div>`;
+  h+=`<button class="btn sec" style="width:100%;margin-bottom:8px" data-act="qall">${esc(t('q_all'))}</button><div class="m" id="qmsg" style="text-align:center;margin-bottom:8px"></div><button class="btn sec" style="width:100%" data-act="data">${esc(t('backup'))}</button><div class="m" style="text-align:center;margin-top:14px">${APP_VERSION}</div>`;
   return h;
 }
 
@@ -511,12 +513,71 @@ function viewer(){
   <div class="m" style="margin-top:6px">${esc(t('ocr_tip'))}</div>
   </div></div>`;
 }
+const readAddForm=()=>({title:$('#nt').value.trim(),author:$('#na').value.trim(),pages:$('#np').value,year:$('#ny').value,isbn:($('#ni')||{}).value||'',cover:(lookup&&lookup.cover)||''});
+async function byIsbn(isbn){
+  try{
+    const r=await fetch('https://openlibrary.org/api/books?bibkeys=ISBN:'+isbn+'&format=json&jscmd=data');
+    const d=await r.json();const x=d['ISBN:'+isbn];
+    if(x)return{title:x.title+(x.subtitle?': '+x.subtitle:''),author:(x.authors&&x.authors[0]&&x.authors[0].name)||'',pages:x.number_of_pages||'',year:(String(x.publish_date||'').match(/\d{4}/)||[''])[0],isbn,cover:'https://covers.openlibrary.org/b/isbn/'+isbn+'-M.jpg?default=false'};
+  }catch(e){}
+  const r=await fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:'+isbn);
+  const d=await r.json();const v=d.items&&d.items[0]&&d.items[0].volumeInfo;if(!v)return null;
+  return{title:v.title+(v.subtitle?': '+v.subtitle:''),author:(v.authors||[])[0]||'',pages:v.pageCount||'',year:(String(v.publishedDate||'').match(/\d{4}/)||[''])[0],isbn,cover:((v.imageLinks&&(v.imageLinks.thumbnail||v.imageLinks.smallThumbnail))||'').replace('http://','https://')};
+}
+async function fillFromIsbn(code){
+  const f=lookup||{};msg='searching';render();
+  let r=null;
+  try{r=await byIsbn(code)}catch(e){msg='lookup_fail';render();return}
+  if(!r){msg='isbn_notfound';lookup={...f,isbn:code}}else{msg='';lookup={...f,...r}}
+  render();
+}
+function stopScan(){scanning=false;if(scanStream){scanStream.getTracks().forEach(x=>x.stop());scanStream=null}}
+async function startScan(){
+  if(!('BarcodeDetector' in window)){msg='scan_unsupported';render();return}
+  try{
+    const det=new BarcodeDetector({formats:['ean_13','ean_8','upc_a']});
+    scanStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});
+    scanning=true;msg='';render();
+    const v=$('#scanvid');v.srcObject=scanStream;await v.play();
+    const loop=async()=>{
+      if(!scanning)return;
+      try{const r=await det.detect(v);if(r.length){const code=r[0].rawValue;stopScan();await fillFromIsbn(code);return}}catch(e){}
+      setTimeout(loop,300);
+    };
+    loop();
+  }catch(e){stopScan();msg='scan_denied';render()}
+}
+const blobToDataURL=b=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(b)});
+async function buildBackup(){
+  const photos=[];
+  try{const db=await idb();for(const x of await reqP(pstore(db,'readonly').getAll())){const {blob,...rest}=x;photos.push({...rest,data:await blobToDataURL(blob)})}}catch(e){}
+  return {app:'lecturas',version:2,exported:new Date().toISOString(),data:S,photos};
+}
+function downloadBlob(name,blob){
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;
+  document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500);
+}
+async function shareFile(name,blob,type){
+  try{
+    const f=new File([blob],name,{type});
+    if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});return}
+  }catch(e){if(e&&e.name==='AbortError')return}
+  downloadBlob(name,blob);
+}
+async function shareText(title,text,el){
+  try{if(navigator.share){await navigator.share({title,text});return}}catch(e){if(e&&e.name==='AbortError')return}
+  try{await navigator.clipboard.writeText(text);if(el)el.textContent=t('copied')}catch(e){if(el)el.textContent=t('copy_manual')}
+}
+function quotesMd(books){
+  return books.filter(b=>(b.quotes||[]).length).map(b=>`## ${b.title}${b.author?' — '+b.author:''}${b.year?' ('+b.year+')':''}\n\n`+b.quotes.map(q=>`> ${String(q.text).replace(/\n+/g,' ')}${q.page?' ('+t('pg_abbr')+' '+q.page+')':''}`).join('\n\n')).join('\n\n');
+}
 function sheetBook(b){
   const p=pct(b);
   return `<div class="sheet" data-act="closebg"><div>
   <div class="row">${cover(b)}<div class="grow"><div class="t" style="white-space:normal;font-size:18px">${esc(b.title)}</div><div class="m">${authorOf(b)}${b.pages?' · '+b.pages+' '+t('pgs_abbr'):''}${b.year?' · '+b.year:''}</div></div><button class="btn sec sm" data-act="close">${esc(t('close'))}</button></div>
   <label>${esc(t('title'))}</label><input id="et" value="${esc(b.title)}">
-  <label>${esc(t('edition_year'))}</label><input id="ey" type="number" min="0" inputmode="numeric" placeholder="${esc(t('eg'))}" value="${b.year||''}">
+  <label>${esc(t('author'))}</label><input id="ea" value="${esc(b.author||'')}">
+  <div class="grid"><div><label>${esc(t('pages'))}</label><input id="epg" type="number" min="0" inputmode="numeric" value="${b.pages||''}"></div><div><label>${esc(t('edition_year'))}</label><input id="ey" type="number" min="0" inputmode="numeric" placeholder="${esc(t('eg'))}" value="${b.year||''}"></div></div>
   <label>${esc(t('status'))}</label><div class="chips">${STK.map(k=>`<button class="chip ${b.status===k?'on':''}" data-act="status" data-id="${k}">${esc(stLabel(k))}</button>`).join('')}</div>
   ${b.status==='reading'?`<label>${esc(t('progress'))}</label><div class="bar"><i style="width:${p}%"></i></div><div class="m">${b.pages?t('pg_of',{c:b.current,p:b.pages}):t('pg_cur',{c:b.current})}${p}%</div>
   <div class="grid"><div><label>${esc(t('start_page'))}</label><input id="pi" type="number" min="0" inputmode="numeric" value="${draft.pi!=null&&draft.pi!==''?draft.pi:b.current}"></div><div><label>${esc(t('end_page'))}</label><input id="pg" type="number" min="0" inputmode="numeric" value="${draft.pg||''}"></div></div>
@@ -525,6 +586,7 @@ function sheetBook(b){
   <div class="row"><label class="btn sec sm filebtn" style="margin:0">${esc(t('take_photo'))}<input id="cam" type="file" accept="image/*" capture="environment"></label><label class="btn sec sm filebtn" style="margin:0">${esc(t('gallery'))}<input id="gal" type="file" accept="image/*"></label></div>
   ${photoMsg?`<div class="m">${esc(t(photoMsg))}</div>`:''}${P.length?`<div class="photos">${P.map(x=>`<img src="${x.url}" data-act="photo" data-id="${x.id}" alt="">`).join('')}</div>`:''}
   ${b.started||b.finished?`<div class="m" style="margin-top:10px">${b.started?esc(t('started'))+' '+fdate(b.started):''}${b.finished?' · '+esc(t('finished'))+' '+fdate(b.finished):''}</div>`:''}
+  ${(b.sessions&&b.sessions.length)?`<label>${esc(t('sessions'))}</label>${b.sessions.map((x,i)=>[x,i]).slice(-10).reverse().map(([x,i])=>`<div class="row m" style="justify-content:space-between;margin-bottom:4px"><span>${fdate(x.date)} · ${x.from!=null?x.from+'–'+x.to+' ':''}(${x.pages} ${esc(t('pgs_abbr'))})</span><button class="chip" style="padding:0 8px" data-act="delsess" data-id="${i}">×</button></div>`).join('')}`:''}
   <label>${esc(t('rating'))}</label><div class="stars">${[1,2,3,4,5].map(i=>`<button class="${b.rating>=i?'on':''}" data-act="rate" data-id="${i}">★</button>`).join('')}</div>
   <label>${esc(t('notes'))}</label><textarea id="notes" placeholder="${esc(t('notes_ph'))}">${esc(b.notes||'')}</textarea>
   <button class="btn sec sm" style="margin-top:6px" data-act="savenotes">${esc(t('save_notes'))}</button>
@@ -532,6 +594,7 @@ function sheetBook(b){
   ${(b.quotes||[]).map((q,i)=>`<div class="q">${esc(q.text)}${q.page?` <span class="m">(${esc(t('pg_abbr'))} ${esc(q.page)})</span>`:''} <button class="chip" style="padding:0 8px;margin-left:6px" data-act="delq" data-id="${i}">×</button></div>`).join('')}
   <div class="grid" style="grid-template-columns:3fr 1fr"><input id="qt" placeholder="${esc(t('new_quote'))}"><input id="qp" placeholder="${esc(t('pg_short'))}" inputmode="numeric"></div>
   <button class="btn sec sm" style="margin-top:6px" data-act="addq">${esc(t('add_quote'))}</button>
+  ${(b.quotes||[]).length?`<div class="row" style="gap:8px;margin-top:8px;flex-wrap:wrap"><button class="btn sec sm" data-act="qcopy">${esc(t('q_copy'))}</button><button class="btn sec sm" data-act="qshare">${esc(t('q_share'))}</button><span class="m" id="qmsg"></span></div>`:''}
   <div style="margin-top:22px"><button class="btn bad" data-act="del">${esc(delArm?t('del_confirm'):t('del_book'))}</button></div>
   </div></div>`;
 }
@@ -539,6 +602,10 @@ function sheetAdd(){
   const l=lookup||{};
   return `<div class="sheet" data-act="closebg"><div>
   <div class="row"><h1 class="grow" style="margin:0">${esc(t('new_book'))}</h1><button class="btn sec sm" data-act="close">${esc(t('close'))}</button></div>
+  <label>ISBN</label>
+  <div class="row" style="gap:8px"><input id="ni" inputmode="numeric" value="${esc(l.isbn||'')}"><button class="btn sec sm" data-act="scan" style="white-space:nowrap">${esc(t('scan_isbn'))}</button></div>
+  <button class="btn sec sm" style="margin-top:6px" data-act="isbn">${esc(t('isbn_search'))}</button>
+  ${scanning?`<div class="m" style="margin:8px 0 4px">${esc(t('scan_hint'))}</div><video id="scanvid" playsinline muted style="width:100%;border-radius:10px;background:#000"></video><button class="btn bad sm" style="margin-top:6px" data-act="scancancel">${esc(t('cancel'))}</button>`:''}
   <label>${esc(t('title'))}</label><input id="nt" value="${esc(l.title||'')}">
   <button class="btn sec sm" style="margin-top:6px" data-act="lookup">${esc(t('lookup'))}</button><div class="m" id="lkmsg">${esc(msg?t(msg):'')}</div>
   <label>${esc(t('author'))}</label><input id="na" value="${esc(l.author||'')}">
@@ -548,9 +615,13 @@ function sheetAdd(){
   </div></div>`;
 }
 function sheetData(){
+  const n=pendingBackup?pendingBackup.data.books.length:0;
   return `<div class="sheet" data-act="closebg"><div>
   <div class="row"><h1 class="grow" style="margin:0">${esc(t('backup'))}</h1><button class="btn sec sm" data-act="close">${esc(t('close'))}</button></div>
   <div class="m" style="margin-top:8px">${esc(t('backup_note'))}</div>
+  <div class="row" style="gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn sm" data-act="bkdl">${esc(t('bk_download'))}</button><button class="btn sec sm" data-act="bkshare">${esc(t('bk_share'))}</button><label class="btn sec sm filebtn" style="margin:0">${esc(t('bk_file_import'))}<input id="bkfile" type="file" accept=".json,application/json,text/plain"></label></div>
+  ${pendingBackup?`<button class="btn bad sm" style="margin-top:8px" data-act="bkconfirm">${esc(t('bk_confirm',{n}))}</button>`:''}
+  <div class="m" id="bkmsg" style="margin-top:6px"></div>
   <label>${esc(t('export_lbl'))}</label>
   <textarea id="exp" readonly style="min-height:110px">${esc(JSON.stringify(S))}</textarea>
   <button class="btn sec sm" style="margin-top:6px" data-act="copy">${esc(t('copy'))}</button> <span class="m" id="cpmsg"></span>
@@ -589,13 +660,13 @@ function setLang(l){
 document.addEventListener('click',async e=>{
   const el=e.target.closest('[data-act]');if(!el)return;
   const a=el.dataset.act,id=el.dataset.id;
-  if(a==='closebg'){if(e.target!==el)return;openId=null;viewId=null;draft={};adding=false;dataSheet=false;delArm=false;impArm=false;render();return}
+  if(a==='closebg'){if(e.target!==el)return;stopScan();pendingBackup=null;openId=null;viewId=null;draft={};adding=false;dataSheet=false;delArm=false;impArm=false;render();return}
   const b=openId?get(openId):null;
   switch(a){
     case 'lang':setLang(id);render();break;
     case 'nav':view=id;render();break;
     case 'open':openId=id;delArm=false;clearP();draft={};photoMsg='';viewId=null;render();loadPhotos(id).then(()=>{if(openId===id)render()});break;
-    case 'close':openId=null;viewId=null;draft={};adding=false;dataSheet=false;delArm=false;impArm=false;lookup=null;msg='';render();break;
+    case 'close':stopScan();pendingBackup=null;openId=null;viewId=null;draft={};adding=false;dataSheet=false;delArm=false;impArm=false;lookup=null;msg='';render();break;
     case 'add':adding=true;lookup=null;msg='';render();break;
     case 'data':dataSheet=true;render();break;
     case 'mprev':if(calIdx>MIN_IDX)calIdx--;render();break;
@@ -660,21 +731,57 @@ document.addEventListener('click',async e=>{
       (b.quotes=b.quotes||[]).push({text:txt,page:x.page?String(x.page):''});save();
       $('#ocrmsg').textContent=t('saved');break}
     case 'lookup':{
-      const q=$('#nt').value.trim();if(!q)break;
+      const f=readAddForm();if(!f.title)break;
       $('#lkmsg').textContent=t('searching');
-      const keep={title:q,author:$('#na').value,pages:$('#np').value,year:$('#ny').value};
       try{
-        const r=await fetch('https://openlibrary.org/search.json?limit=1&fields=title,author_name,number_of_pages_median&q='+encodeURIComponent(q));
+        const r=await fetch('https://openlibrary.org/search.json?limit=1&fields=title,author_name,number_of_pages_median&q='+encodeURIComponent(f.title));
         const d=await r.json();const x=d.docs&&d.docs[0];
-        if(!x){msg='no_results';lookup=keep}
-        else{msg='';lookup={title:x.title,author:(x.author_name||[])[0]||'',pages:x.number_of_pages_median||'',year:keep.year}}
-      }catch(err){msg='lookup_fail';lookup=keep}
+        if(!x){msg='no_results';lookup=f}
+        else{msg='';lookup={...f,title:x.title,author:(x.author_name||[])[0]||f.author,pages:x.number_of_pages_median||f.pages}}
+      }catch(err){msg='lookup_fail';lookup=f}
       render();break}
+    case 'isbn':{
+      const f=readAddForm(),code=f.isbn.replace(/[^0-9Xx]/g,'');
+      if(!code){$('#ni').focus();break}
+      lookup=f;await fillFromIsbn(code);break}
+    case 'scan':lookup=readAddForm();startScan();break;
+    case 'scancancel':stopScan();render();break;
     case 'create':{
-      const title=$('#nt').value.trim();if(!title){$('#nt').focus();break}
-      const nb={id:uid(),title,author:$('#na').value.trim(),pages:parseInt($('#np').value,10)||0,year:parseInt($('#ny').value,10)||0,status:'reading',current:0,rating:0,added:today(),started:'',finished:'',notes:'',quotes:[],sessions:[]};
+      const f=readAddForm();if(!f.title){$('#nt').focus();break}
+      const nb={id:uid(),title:f.title,author:f.author,pages:parseInt(f.pages,10)||0,year:parseInt(f.year,10)||0,isbn:f.isbn.replace(/[^0-9Xx]/g,''),cover:f.cover,status:'reading',current:0,rating:0,added:today(),started:'',finished:'',notes:'',quotes:[],sessions:[]};
       setStatus(nb,$('#ns').value);
-      S.books.push(nb);save();adding=false;lookup=null;msg='';render();break}
+      stopScan();S.books.push(nb);save();adding=false;lookup=null;msg='';render();break}
+    case 'delsess':{
+      const ss=b.sessions[+id];if(!ss)break;
+      b.sessions.splice(+id,1);
+      if(ss.from!=null&&ss.to===b.current)b.current=ss.from;
+      save();render();break}
+    case 'qcopy':{
+      try{await navigator.clipboard.writeText(quotesMd([b]));$('#qmsg').textContent=t('copied')}catch(err){$('#qmsg').textContent=t('copy_manual')}
+      break}
+    case 'qshare':await shareText(b.title,quotesMd([b]),$('#qmsg'));break;
+    case 'qall':{
+      const tx=quotesMd(S.books),m=$('#qmsg');
+      if(!tx){m.textContent=t('q_none');break}
+      await shareText(t('quotes'),tx,m);break}
+    case 'bkdl':{
+      const m=$('#bkmsg');m.textContent=t('bk_working');
+      const bk=await buildBackup();
+      downloadBlob('lecturas-'+today()+'.json',new Blob([JSON.stringify(bk)],{type:'application/json'}));
+      m.textContent=t('bk_done');break}
+    case 'bkshare':{
+      const m=$('#bkmsg');m.textContent=t('bk_working');
+      const bk=await buildBackup();
+      await shareFile('lecturas-'+today()+'.json',new Blob([JSON.stringify(bk)],{type:'application/json'}),'application/json');
+      m.textContent=t('bk_done');break}
+    case 'bkconfirm':{
+      const pb=pendingBackup;if(!pb)break;
+      S=pb.data;if(!Array.isArray(S.books))S.books=[];migrate();save();
+      try{
+        const db=await idb();await reqP(pstore(db,'readwrite').clear());
+        for(const ph of pb.photos){const {data,...rest}=ph;const blob=await (await fetch(data)).blob();await reqP(pstore(db,'readwrite').put({...rest,blob}))}
+      }catch(err){}
+      pendingBackup=null;dataSheet=false;render();break}
     case 'copy':{
       const ta=$('#exp');ta.select();
       try{await navigator.clipboard.writeText(ta.value);$('#cpmsg').textContent=t('copied')}catch(err){$('#cpmsg').textContent=t('copy_manual')}
@@ -718,9 +825,18 @@ document.addEventListener('change',async e=>{
     draft={};return}
   if(e.target.id==='ocrlang'){ocrLang=e.target.value;return}
   if(e.target.id==='trlang'){trLang=e.target.value;return}
-  if(e.target.id==='et'&&openId&&get(openId)){
+  if(e.target.id==='bkfile'){
+    const f=e.target.files&&e.target.files[0];if(!f)return;
+    let ok=false;
+    try{const d=JSON.parse(await f.text());const data=d.data||d;if(data&&Array.isArray(data.books)){pendingBackup={data,photos:Array.isArray(d.photos)?d.photos:[]};ok=true}}catch(err){}
+    if(!ok)pendingBackup=null;
+    render();if(!ok){const m=$('#bkmsg');if(m)m.textContent=t('bad_json')}
+    return}
+  if(['et','ea','epg'].includes(e.target.id)&&openId&&get(openId)){
     const bk=get(openId),v=e.target.value.trim();
-    if(v)bk.title=v;
+    if(e.target.id==='et'){if(v)bk.title=v}
+    else if(e.target.id==='ea')bk.author=v;
+    else bk.pages=parseInt(v,10)||0;
     save();draft={pi:($('#pi')||{}).value,pg:($('#pg')||{}).value};render();draft={};return}
   if(e.target.id==='ey'&&openId&&get(openId)){get(openId).year=parseInt(e.target.value,10)||0;save()}
 });
