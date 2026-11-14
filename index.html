@@ -86,7 +86,7 @@ button:disabled{opacity:.35}
 <script>
 const D={
 es:{
-app_title:'Mis lecturas',sel_hint:'Arrastra el dedo sobre la foto para elegir la zona que quieres leer.',sel_clear:'Leer toda la foto',ocr_tip:'Consejo: encuadra solo la página, con buena luz, sin sombras y el texto recto. Comprueba que el idioma elegido es el del libro.',translate:'Traducir',translate_to:'Traducir a',translating:'Traduciendo…',tr_fail:'No se pudo traducir (hace falta conexión).',tr_limit:'Límite diario del traductor alcanzado; inténtalo mañana.',tr_text:'Traducción',tr_same:'El idioma de destino es el mismo que el del texto.',st_reading:'Leyendo',st_done:'Terminado',st_dropped:'Abandonado',unknown_author:'Autor desconocido',
+app_title:'Mis lecturas',ocr_clean:'Limpiar texto',sel_hint:'Arrastra el dedo sobre la foto para elegir la zona que quieres leer.',sel_clear:'Leer toda la foto',ocr_tip:'Consejo: encuadra solo la página, con buena luz, sin sombras y el texto recto. Comprueba que el idioma elegido es el del libro.',translate:'Traducir',translate_to:'Traducir a',translating:'Traduciendo…',tr_fail:'No se pudo traducir (hace falta conexión).',tr_limit:'Límite diario del traductor alcanzado; inténtalo mañana.',tr_text:'Traducción',tr_same:'El idioma de destino es el mismo que el del texto.',st_reading:'Leyendo',st_done:'Terminado',st_dropped:'Abandonado',unknown_author:'Autor desconocido',
 nosave:'No se puede guardar en este navegador. Usa «Copia de seguridad» para no perder datos.',
 books_done:'Libros terminados',streak:'Racha',reading_now:'Leyendo ahora',nothing:'Nada en marcha. Pulsa + para añadir un libro.',
 from_to:'Del {a} al {b}',finished_on:'Terminado el {b}',
@@ -110,7 +110,7 @@ ocr_save:'Guardar texto',ocr_quote:'Guardar como cita',ocr_loading:'Descargando 
 ocr_fail:'No se pudo leer el texto (la primera vez hace falta conexión).',ocr_empty:'No se ha encontrado texto.',ocr_lang:'Idioma del texto'
 },
 en:{
-app_title:'My reading',sel_hint:'Drag your finger over the photo to choose the area you want to read.',sel_clear:'Read the whole photo',ocr_tip:'Tip: frame only the page, with good light, no shadows and straight text. Check that the selected language is the book\'s.',translate:'Translate',translate_to:'Translate to',translating:'Translating…',tr_fail:'Couldn\'t translate (a connection is needed).',tr_limit:'Daily translator limit reached; try again tomorrow.',tr_text:'Translation',tr_same:'The target language is the same as the text language.',st_reading:'Reading',st_done:'Finished',st_dropped:'Abandoned',unknown_author:'Unknown author',
+app_title:'My reading',ocr_clean:'Clean up text',sel_hint:'Drag your finger over the photo to choose the area you want to read.',sel_clear:'Read the whole photo',ocr_tip:'Tip: frame only the page, with good light, no shadows and straight text. Check that the selected language is the book\'s.',translate:'Translate',translate_to:'Translate to',translating:'Translating…',tr_fail:'Couldn\'t translate (a connection is needed).',tr_limit:'Daily translator limit reached; try again tomorrow.',tr_text:'Translation',tr_same:'The target language is the same as the text language.',st_reading:'Reading',st_done:'Finished',st_dropped:'Abandoned',unknown_author:'Unknown author',
 nosave:'Can\'t save in this browser. Use "Backup" so you don\'t lose your data.',
 books_done:'Books finished',streak:'Streak',reading_now:'Reading now',nothing:'Nothing in progress. Tap + to add a book.',
 from_to:'From {a} to {b}',finished_on:'Finished on {b}',
@@ -134,7 +134,7 @@ ocr_save:'Save text',ocr_quote:'Save as quote',ocr_loading:'Downloading model…
 ocr_fail:'Couldn\'t read the text (a connection is needed the first time).',ocr_empty:'No text found.',ocr_lang:'Text language'
 },
 it:{
-app_title:'Le mie letture',sel_hint:'Trascina il dito sulla foto per scegliere la zona da leggere.',sel_clear:'Leggi tutta la foto',ocr_tip:'Consiglio: inquadra solo la pagina, con buona luce, senza ombre e testo dritto. Controlla che la lingua scelta sia quella del libro.',translate:'Traduci',translate_to:'Traduci in',translating:'Traduzione…',tr_fail:'Impossibile tradurre (serve la connessione).',tr_limit:'Limite giornaliero del traduttore raggiunto; riprova domani.',tr_text:'Traduzione',tr_same:'La lingua di destinazione è la stessa del testo.',st_reading:'In lettura',st_done:'Finito',st_dropped:'Abbandonato',unknown_author:'Autore sconosciuto',
+app_title:'Le mie letture',ocr_clean:'Pulisci testo',sel_hint:'Trascina il dito sulla foto per scegliere la zona da leggere.',sel_clear:'Leggi tutta la foto',ocr_tip:'Consiglio: inquadra solo la pagina, con buona luce, senza ombre e testo dritto. Controlla che la lingua scelta sia quella del libro.',translate:'Traduci',translate_to:'Traduci in',translating:'Traduzione…',tr_fail:'Impossibile tradurre (serve la connessione).',tr_limit:'Limite giornaliero del traduttore raggiunto; riprova domani.',tr_text:'Traduzione',tr_same:'La lingua di destinazione è la stessa del testo.',st_reading:'In lettura',st_done:'Finito',st_dropped:'Abbandonato',unknown_author:'Autore sconosciuto',
 nosave:'Impossibile salvare in questo browser. Usa «Backup» per non perdere i dati.',
 books_done:'Libri finiti',streak:'Serie',reading_now:'In lettura ora',nothing:'Niente in corso. Tocca + per aggiungere un libro.',
 from_to:'Dal {a} al {b}',finished_on:'Finito il {b}',
@@ -158,7 +158,7 @@ ocr_save:'Salva testo',ocr_quote:'Salva come citazione',ocr_loading:'Scaricament
 ocr_fail:'Impossibile leggere il testo (la prima volta serve la connessione).',ocr_empty:'Nessun testo trovato.',ocr_lang:'Lingua del testo'
 },
 de:{
-app_title:'Meine Lektüre',sel_hint:'Ziehe mit dem Finger über das Foto, um den Bereich zum Lesen auszuwählen.',sel_clear:'Ganzes Foto lesen',ocr_tip:'Tipp: Nur die Seite aufnehmen, mit gutem Licht, ohne Schatten und gerade. Prüfe, dass die gewählte Sprache die des Buchs ist.',translate:'Übersetzen',translate_to:'Übersetzen nach',translating:'Übersetze…',tr_fail:'Übersetzung nicht möglich (Verbindung nötig).',tr_limit:'Tageslimit des Übersetzers erreicht; versuche es morgen erneut.',tr_text:'Übersetzung',tr_same:'Die Zielsprache ist dieselbe wie die Textsprache.',st_reading:'Lese gerade',st_done:'Gelesen',st_dropped:'Abgebrochen',unknown_author:'Unbekannter Autor',
+app_title:'Meine Lektüre',ocr_clean:'Text bereinigen',sel_hint:'Ziehe mit dem Finger über das Foto, um den Bereich zum Lesen auszuwählen.',sel_clear:'Ganzes Foto lesen',ocr_tip:'Tipp: Nur die Seite aufnehmen, mit gutem Licht, ohne Schatten und gerade. Prüfe, dass die gewählte Sprache die des Buchs ist.',translate:'Übersetzen',translate_to:'Übersetzen nach',translating:'Übersetze…',tr_fail:'Übersetzung nicht möglich (Verbindung nötig).',tr_limit:'Tageslimit des Übersetzers erreicht; versuche es morgen erneut.',tr_text:'Übersetzung',tr_same:'Die Zielsprache ist dieselbe wie die Textsprache.',st_reading:'Lese gerade',st_done:'Gelesen',st_dropped:'Abgebrochen',unknown_author:'Unbekannter Autor',
 nosave:'In diesem Browser kann nicht gespeichert werden. Nutze „Sicherung“, um keine Daten zu verlieren.',
 books_done:'Gelesene Bücher',streak:'Serie',reading_now:'Aktuell am Lesen',nothing:'Nichts in Arbeit. Tippe auf +, um ein Buch hinzuzufügen.',
 from_to:'Vom {a} bis {b}',finished_on:'Beendet am {b}',
@@ -182,7 +182,7 @@ ocr_save:'Text speichern',ocr_quote:'Als Zitat speichern',ocr_loading:'Modell wi
 ocr_fail:'Text konnte nicht gelesen werden (beim ersten Mal ist eine Verbindung nötig).',ocr_empty:'Kein Text gefunden.',ocr_lang:'Sprache des Textes'
 },
 fr:{
-app_title:'Mes lectures',sel_hint:'Fais glisser le doigt sur la photo pour choisir la zone à lire.',sel_clear:'Lire toute la photo',ocr_tip:'Astuce : cadre uniquement la page, avec une bonne lumière, sans ombres et le texte droit. Vérifie que la langue choisie est celle du livre.',translate:'Traduire',translate_to:'Traduire en',translating:'Traduction…',tr_fail:'Impossible de traduire (connexion nécessaire).',tr_limit:'Limite quotidienne du traducteur atteinte ; réessaie demain.',tr_text:'Traduction',tr_same:'La langue cible est la même que celle du texte.',st_reading:'En cours',st_done:'Terminé',st_dropped:'Abandonné',unknown_author:'Auteur inconnu',
+app_title:'Mes lectures',ocr_clean:'Nettoyer le texte',sel_hint:'Fais glisser le doigt sur la photo pour choisir la zone à lire.',sel_clear:'Lire toute la photo',ocr_tip:'Astuce : cadre uniquement la page, avec une bonne lumière, sans ombres et le texte droit. Vérifie que la langue choisie est celle du livre.',translate:'Traduire',translate_to:'Traduire en',translating:'Traduction…',tr_fail:'Impossible de traduire (connexion nécessaire).',tr_limit:'Limite quotidienne du traducteur atteinte ; réessaie demain.',tr_text:'Traduction',tr_same:'La langue cible est la même que celle du texte.',st_reading:'En cours',st_done:'Terminé',st_dropped:'Abandonné',unknown_author:'Auteur inconnu',
 nosave:'Impossible d\'enregistrer dans ce navigateur. Utilise « Sauvegarde » pour ne pas perdre tes données.',
 books_done:'Livres terminés',streak:'Série',reading_now:'En cours de lecture',nothing:'Rien en cours. Touche + pour ajouter un livre.',
 from_to:'Du {a} au {b}',finished_on:'Terminé le {b}',
@@ -206,7 +206,7 @@ ocr_save:'Enregistrer le texte',ocr_quote:'Enregistrer comme citation',ocr_loadi
 ocr_fail:'Impossible de lire le texte (une connexion est nécessaire la première fois).',ocr_empty:'Aucun texte trouvé.',ocr_lang:'Langue du texte'
 },
 ja:{
-app_title:'マイ読書',sel_hint:'写真上で指をドラッグして、読み取る範囲を選択してください。',sel_clear:'写真全体を読み取る',ocr_tip:'ヒント: ページだけを、明るい場所で、影や傾きがないように撮影してください。選択した言語が本の言語か確認してください。',translate:'翻訳',translate_to:'翻訳先',translating:'翻訳中…',tr_fail:'翻訳できませんでした（接続が必要です）。',tr_limit:'翻訳の1日の上限に達しました。明日もう一度お試しください。',tr_text:'翻訳',tr_same:'翻訳先の言語がテキストの言語と同じです。',st_reading:'読書中',st_done:'読了',st_dropped:'中断',unknown_author:'著者不明',
+app_title:'マイ読書',ocr_clean:'テキストを整える',sel_hint:'写真上で指をドラッグして、読み取る範囲を選択してください。',sel_clear:'写真全体を読み取る',ocr_tip:'ヒント: ページだけを、明るい場所で、影や傾きがないように撮影してください。選択した言語が本の言語か確認してください。',translate:'翻訳',translate_to:'翻訳先',translating:'翻訳中…',tr_fail:'翻訳できませんでした（接続が必要です）。',tr_limit:'翻訳の1日の上限に達しました。明日もう一度お試しください。',tr_text:'翻訳',tr_same:'翻訳先の言語がテキストの言語と同じです。',st_reading:'読書中',st_done:'読了',st_dropped:'中断',unknown_author:'著者不明',
 nosave:'このブラウザでは保存できません。データを失わないよう「バックアップ」を使ってください。',
 books_done:'読了した本',streak:'連続日数',reading_now:'読書中',nothing:'進行中の本はありません。+をタップして本を追加。',
 from_to:'{a}〜{b}',finished_on:'{b} に読了',
@@ -238,6 +238,7 @@ it:'<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height=
 FLAG.de='<svg viewBox="0 0 30 18" preserveAspectRatio="none"><rect width="30" height="6" fill="#000"/><rect y="6" width="30" height="6" fill="#dd0000"/><rect y="12" width="30" height="6" fill="#ffce00"/></svg>';
 FLAG.fr='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height="20" fill="#0055a4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ef4135"/></svg>';
 FLAG.ja='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg>';
+const APP_VERSION='v2026.11.14-e';
 const KEY='lecturas.v1',LKEY='lecturas.lang';
 let lang='es';
 try{const l=localStorage.getItem(LKEY);if(l&&D[l])lang=l;else{const n=(navigator.language||'es').slice(0,2);if(D[n])lang=n}}catch(e){}
@@ -353,7 +354,7 @@ function vStats(){
   let h=`<h1>${esc(t('stats'))}</h1><h2>${esc(t('reading_days'))}</h2>`+calendar()+`<h2>${esc(t('pages_year'))}</h2>`+yearChart();
   h+=`<div class="card"><div class="m">${esc(t('books_done'))}</div><div class="big">${done.length}</div></div>`;
   if(top.length)h+=`<div class="card"><div class="m">${esc(t('top_authors'))}</div>${top.map(([a,n])=>`<div class="row"><div class="grow">${esc(a)}</div><b>${n}</b></div>`).join('')}</div>`;
-  h+=`<button class="btn sec" style="width:100%" data-act="data">${esc(t('backup'))}</button>`;
+  h+=`<button class="btn sec" style="width:100%" data-act="data">${esc(t('backup'))}</button><div class="m" style="text-align:center;margin-top:14px">${APP_VERSION}</div>`;
   return h;
 }
 
@@ -407,6 +408,15 @@ function loadTess(){
   if(window.Tesseract)return Promise.resolve();
   return tessP||(tessP=new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';s.onload=res;s.onerror=()=>{tessP=null;rej(new Error('load'))};document.head.appendChild(s)}));
 }
+function cleanText(raw,ocr){
+  const cjk=ocr==='jpn';
+  let s=String(raw||'').replace(/\r/g,'').replace(/\u00ad/g,'');
+  s=s.replace(/(\p{L})[-\u2010\u2011]\n(?=\p{Ll})/gu,'$1');
+  let out=s.split(/\n\s*\n/).map(p=>p.split('\n').map(l=>l.trim()).filter(Boolean).join(cjk?'':' ').replace(/[ \t]{2,}/g,' ').trim())
+    .filter(p=>p&&!/^\d{1,4}$/.test(p));
+  if(cjk)out=out.map(p=>p.replace(/(?<=[\u3000-\u9fff\uff00-\uffef]) (?=[\u3000-\u9fff\uff00-\uffef])/g,''));
+  return out.join('\n\n');
+}
 async function runOcr(){
   const x=P.find(q=>q.id===viewId);if(!x||ocrBusy)return;
   ocrBusy=true;ocrStatus=t('ocr_loading');render();
@@ -420,7 +430,7 @@ async function runOcr(){
     let img=x.blob;try{img=await prepOcr(x.blob,cropSel)}catch(e){}
     await worker.setParameters({preserve_interword_spaces:'1'});
     const r=await worker.recognize(img);
-    x.text=((r.data&&r.data.text)||'').trim();
+    x.text=cleanText((r.data&&r.data.text)||'',ocrLang);
     await savePhoto(x);
     ocrStatus=x.text?'':t('ocr_empty');
   }catch(err){ocrStatus=t('ocr_fail')}
@@ -486,7 +496,7 @@ function viewer(){
   <div class="vbar"><span>${fdate(x.date)}${x.page?' · '+t('pg_abbr')+' '+x.page:''}</span><button class="btn sec sm" data-act="vclose">${esc(t('close'))}</button><button class="btn bad sm" data-act="vdel">${esc(pdelArm?t('confirm_delete'):t('delete'))}</button></div>
   <div class="ocr">
   ${has?`<label style="margin-top:0">${esc(t('ocr_text'))}</label><textarea id="ocrtxt" style="min-height:130px">${esc(x.text)}</textarea>
-  <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px"><button class="btn sec sm" data-act="ocrsave">${esc(t('ocr_save'))}</button><button class="btn sec sm" data-act="ocrcopy">${esc(t('copy'))}</button><button class="btn sec sm" data-act="ocrquote">${esc(t('ocr_quote'))}</button></div>
+  <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:8px"><button class="btn sec sm" data-act="ocrsave">${esc(t('ocr_save'))}</button><button class="btn sec sm" data-act="ocrclean">${esc(t('ocr_clean'))}</button><button class="btn sec sm" data-act="ocrcopy">${esc(t('copy'))}</button><button class="btn sec sm" data-act="ocrquote">${esc(t('ocr_quote'))}</button></div>
   <div class="m" id="ocrmsg" style="margin-top:6px"></div>
   <label>${esc(t('translate_to'))}</label>
   <div class="row" style="gap:8px"><select id="trlang" style="width:auto">${Object.keys(LNAME).map(k=>`<option value="${k}" ${trLang===k?'selected':''}>${LNAME[k]}</option>`).join('')}</select><button class="btn sm" data-act="translate" ${trBusy?'disabled':''}>${esc(t('translate'))}</button></div>
@@ -627,6 +637,11 @@ document.addEventListener('click',async e=>{
     case 'ocrsave':{
       const x=P.find(q=>q.id===viewId);if(!x)break;
       x.text=$('#ocrtxt').value;
+      try{await savePhoto(x);$('#ocrmsg').textContent=t('saved')}catch(err){$('#ocrmsg').textContent=t('photo_fail')}
+      break}
+    case 'ocrclean':{
+      const x=P.find(q=>q.id===viewId);if(!x)break;
+      const ta=$('#ocrtxt');ta.value=cleanText(ta.value,ocrLang);x.text=ta.value;
       try{await savePhoto(x);$('#ocrmsg').textContent=t('saved')}catch(err){$('#ocrmsg').textContent=t('photo_fail')}
       break}
     case 'ocrcopy':{
