@@ -238,7 +238,7 @@ it:'<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height=
 FLAG.de='<svg viewBox="0 0 30 18" preserveAspectRatio="none"><rect width="30" height="6" fill="#000"/><rect y="6" width="30" height="6" fill="#dd0000"/><rect y="12" width="30" height="6" fill="#ffce00"/></svg>';
 FLAG.fr='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="10" height="20" fill="#0055a4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ef4135"/></svg>';
 FLAG.ja='<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg>';
-const APP_VERSION='v2026.11.15-q';
+const APP_VERSION='v2026.11.15-r';
 const KEY='lecturas.v1',LKEY='lecturas.lang';
 let lang='es';
 try{const l=localStorage.getItem(LKEY);if(l&&D[l])lang=l;else{const n=(navigator.language||'es').slice(0,2);if(D[n])lang=n}}catch(e){}
@@ -258,7 +258,7 @@ const stLabel=k=>t('st_'+k);
 const STK=['pending','reading','done','dropped'];
 function migrate(){S.books.forEach(b=>{if(!b.tl)b.tl=lang;if(b.status==='want'){b.status='reading';if(!b.started)b.started=today()}})}
 let view='reading',openId=null,adding=false,dataSheet=false,msg='',delArm=false,impArm=false,lookup=null;
-let scanning=false,scanStream=null,pendingBackup=null,editSess=null;
+let scanning=false,scanStream=null,pendingBackup=null,editSess=null,delSessArm=null;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pad=n=>String(n).padStart(2,'0');
@@ -662,7 +662,7 @@ function sheetBook(b){
   ${photoMsg?`<div class="m">${esc(t(photoMsg))}</div>`:''}${P.length?`<div class="photos">${P.map(x=>`<img src="${x.url}" data-act="photo" data-id="${x.id}" alt="">`).join('')}</div>`:''}
   ${b.started||b.finished?`<div class="m" style="margin-top:10px">${b.started?esc(t('started'))+' '+fdate(b.started):''}${b.finished?' · '+esc(t('finished'))+' '+fdate(b.finished):''}</div>`:''}
   <label>${esc(t('sessions'))}</label>
-  ${(b.sessions||[]).length?`<div style="max-height:230px;overflow:auto">${b.sessions.map((x,i)=>[x,i]).sort((p,q)=>q[0].date.localeCompare(p[0].date)||q[1]-p[1]).map(([x,i])=>`<div class="row m" style="justify-content:space-between;margin-bottom:4px"><span>${fdate(x.date)} · ${x.from!=null?x.from+'–'+x.to+' ':''}(${x.pages} ${esc(t('pgs_abbr'))})</span><span><button class="chip" style="padding:0 8px" data-act="editsess" data-id="${i}">✎</button> <button class="chip" style="padding:0 8px" data-act="delsess" data-id="${i}">×</button></span></div>`).join('')}</div>`:''}
+  ${(b.sessions||[]).length?`<div style="max-height:230px;overflow:auto">${b.sessions.map((x,i)=>[x,i]).sort((p,q)=>q[0].date.localeCompare(p[0].date)||q[1]-p[1]).map(([x,i])=>`<div class="row m" style="justify-content:space-between;margin-bottom:4px"><span>${fdate(x.date)} · ${x.from!=null?x.from+'–'+x.to+' ':''}(${x.pages} ${esc(t('pgs_abbr'))})</span><span><button class="chip" style="padding:0 8px" data-act="editsess" data-id="${i}">✎</button> <button class="chip" style="padding:0 8px;${delSessArm===i?'border-color:var(--warn);color:var(--warn)':''}" data-act="delsess" data-id="${i}">${delSessArm===i?esc(t('confirm_delete')):'×'}</button></span></div>`).join('')}</div>`:''}
   ${editSess!=null?sessForm(b):`<button class="btn sec sm" style="margin-top:6px" data-act="newsess">${esc(t('add_sess'))}</button>`}
   <label>${esc(t('rating'))}</label><div class="stars">${[1,2,3,4,5].map(i=>`<button class="${b.rating>=i?'on':''}" data-act="rate" data-id="${i}">★</button>`).join('')}</div>
   <label>${esc(t('notes'))}</label><textarea id="notes" placeholder="${esc(t('notes_ph'))}">${esc(b.notes||'')}</textarea>
@@ -762,6 +762,7 @@ document.addEventListener('click',async e=>{
   const a=el.dataset.act,id=el.dataset.id;
   if(a==='closebg'){if(e.target!==el)return;editSess=null;stopScan();pendingBackup=null;openId=null;viewId=null;draft={};adding=false;dataSheet=false;delArm=false;impArm=false;render();return}
   const b=openId?get(openId):null;
+  if(a!=='delsess')delSessArm=null;
   switch(a){
     case 'lang':{
       S.books.forEach(x=>{if(!x.tl)x.tl=lang});
@@ -870,6 +871,8 @@ document.addEventListener('click',async e=>{
       editSess=null;save();draft={pi:($('#pi')||{}).value,pg:($('#pg')||{}).value};render();draft={};break}
     case 'delsess':{
       const ss=b.sessions[+id];if(!ss)break;
+      if(delSessArm!==+id){delSessArm=+id;draft={pi:($('#pi')||{}).value,pg:($('#pg')||{}).value};render();draft={};break}
+      delSessArm=null;
       b.sessions.splice(+id,1);
       editSess=null;
       if(ss.from!=null&&ss.to===b.current)b.current=ss.from;
